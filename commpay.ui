@@ -1,0 +1,1864 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CommPay</class>
+ <widget class="QMainWindow" name="CommPay">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>717</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>CommPay</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="1" column="2" rowspan="5">
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="1" column="4" rowspan="3">
+     <spacer name="verticalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="4" column="3" colspan="3">
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_11">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_10">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Если Вы изменили тариф или валюту, советуется нажать на кнопку &amp;quot;пересчитать&amp;quot;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="recalculate">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Пересчитать</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="1">
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QLabel" name="inputIndication">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-size: 13px;</string>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="Indication">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="tenants">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-size: 13px;</string>
+        </property>
+        <property name="text">
+         <string>Количество проживающих (ненужно)</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="IndiTenants">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_9">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item row="4" column="1">
+     <widget class="QGroupBox" name="MessageResult">
+      <property name="title">
+       <string>Сумма к оплате</string>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="1">
+        <widget class="QTextBrowser" name="Result">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <spacer name="horizontalSpacer_13">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="2" column="1">
+        <widget class="QPushButton" name="saver">
+         <property name="text">
+          <string>Сохранить</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="6" rowspan="4">
+     <spacer name="verticalSpacer_4">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="0" column="0" colspan="7">
+     <spacer name="horizontalSpacer_14">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="6" column="0" colspan="7">
+     <spacer name="horizontalSpacer_8">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="1" column="5" rowspan="3">
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <widget class="QLabel" name="sentence">
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Каждый расчитывается разной валютой. Если&lt;br&gt;нужно, Вы можете указать, какой валютой&lt;br&gt;Вы пользуетесь. Для этого проставте галочку&lt;br&gt;снизу и выберите свою валюту&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="namePersonValuta">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Ваша валюта: -&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QScrollArea" name="optionValuta">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>-2784</y>
+           <width>337</width>
+           <height>2994</height>
+          </rect>
+         </property>
+         <property name="mouseTracking">
+          <bool>false</bool>
+         </property>
+         <property name="tabletTracking">
+          <bool>false</bool>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="13" column="0">
+           <widget class="QRadioButton" name="AMD">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>AMD Армянский драм</string>
+            </property>
+           </widget>
+          </item>
+          <item row="177" column="0">
+           <widget class="QRadioButton" name="LBP">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>LBP Ливанский фунт</string>
+            </property>
+           </widget>
+          </item>
+          <item row="125" column="0">
+           <widget class="QRadioButton" name="RSD">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>RSD Сербский динар</string>
+            </property>
+           </widget>
+          </item>
+          <item row="16" column="0">
+           <widget class="QRadioButton" name="KGS">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>KGS Киргизский сом</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QRadioButton" name="USD">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>USD Доллар США</string>
+            </property>
+           </widget>
+          </item>
+          <item row="217" column="0">
+           <widget class="QRadioButton" name="AED">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>AED Дирхам ОАЭ</string>
+            </property>
+           </widget>
+          </item>
+          <item row="64" column="0">
+           <widget class="QRadioButton" name="ZMK">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>ZMK Замбийская квача</string>
+            </property>
+           </widget>
+          </item>
+          <item row="205" column="0">
+           <widget class="QRadioButton" name="EGP">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>EGP Египетский фунт</string>
+            </property>
+           </widget>
+          </item>
+          <item row="189" column="0">
+           <widget class="QRadioButton" name="ISK">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>ISK Исландская крона</string>
+            </property>
+           </widget>
+          </item>
+          <item row="162" column="0">
+           <widget class="QRadioButton" name="MVR">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>MVR Мальдивская руфия</string>
+            </property>
+           </widget>
+          </item>
+          <item row="186" column="0">
+           <widget class="QRadioButton" name="KES">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>KES Кенийский шиллинг</string>
+            </property>
+           </widget>
+          </item>
+          <item row="93" column="0">
+           <widget class="QRadioButton" name="TWD">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>TWD Тайваньский доллар</string>
+            </property>
+           </widget>
+          </item>
+          <item row="165" column="0">
+           <widget class="QRadioButton" name="MRO">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>MRO Мавританская угия</string>
+            </property>
+           </widget>
+          </item>
+          <item row="197" column="0">
+           <widget class="QRadioButton" name="HRK">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>HRK Хорватская куна</string>
+            </property>
+           </widget>
+          </item>
+          <item row="88" column="0">
+           <widget class="QRadioButton" name="UGX">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>UGX Угандийский шиллинг</string>
+            </property>
+           </widget>
+          </item>
+          <item row="15" column="0">
+           <widget class="QRadioButton" name="GEL">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>GEL Грузинский лари</string>
+            </property>
+           </widget>
+          </item>
+          <item row="18" column="0">
+           <widget class="QRadioButton" name="MDL">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>MDL Молдовский лей</string>
+            </property>
+           </widget>
+          </item>
+          <item row="66" column="0">
+           <widget class="QRadioButton" name="ZAR">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>ZAR Южно-африканский рэнд</string>
+            </property>
+           </widget>
+          </item>
+          <item row="79" column="0">
+           <widget class="QRadioButton" name="VND">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>VND Вьетнамский донг</string>
+            </property>
+           </widget>
+          </item>
+          <item row="206" column="0">
+           <widget class="QRadioButton" name="DZD">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>DZD Алжирский динар</string>
+            </property>
+           </widget>
+          </item>
+          <item row="214" column="0">
+           <widget class="QRadioButton" name="CAD">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>CAD Канадский доллар</string>
+            </property>
+           </widget>
+          </item>
+          <item row="220" column="0">
+           <widget class="QRadioButton" name="RON">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>RON Новый румынский лей</string>
+            </property>
+           </widget>
+          </item>
+          <item row="110" column="0">
+           <widget class="QRadioButton" name="SOS">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>SOS Сомалийский шиллинг</string>
+            </property>
+           </widget>
+          </item>
+          <item row="123" column="0">
+           <widget class="QRadioButton" name="SAR">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>SAR Саудовский риял</string>
+            </property>
+           </widget>
+          </item>
+          <item row="209" column="0">
+           <widget class="QRadioButton" name="CUP">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>CUP Кубинский песо</string>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="0">
+           <widget class="QRadioButton" name="UAH">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>UAH Украинская гривна</string>
+            </property>
+           </widget>
+          </item>
+          <item row="192" column="0">
+           <widget class="QRadioButton" name="IQD">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>IQD Иракский динар</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="International">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>Основные мировые валюты</string>
+            </property>
+           </widget>
+          </item>
+          <item row="171" column="0">
+           <widget class="QRadioButton" name="MAD">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>MAD Марокканский дирхам</string>
+            </property>
+           </widget>
+          </item>
+          <item row="207" column="0">
+           <widget class="QRadioButton" name="DKK">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>DKK Датская крона</string>
+            </property>
+           </widget>
+          </item>
+          <item row="176" column="0">
+           <widget class="QRadioButton" name="LKR">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>LKR Шри-ланкийская рупия</string>
+            </property>
+           </widget>
+          </item>
+          <item row="167" column="0">
+           <widget class="QRadioButton" name="MNT">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>MNT Монгольский тугрик</string>
+            </property>
+           </widget>
+          </item>
+          <item row="137" column="0">
+           <widget class="QRadioButton" name="PHP">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>PHP Филиппинский песо</string>
+            </property>
+           </widget>
+          </item>
+          <item row="112" column="0">
+           <widget class="QRadioButton" name="SLL">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>SLL Сьерра-леонский леоне</string>
+            </property>
+           </widget>
+          </item>
+          <item row="153" column="0">
+           <widget class="QRadioButton" name="MZN">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>MZN Мозамбикский метикал</string>
+            </property>
+           </widget>
+          </item>
+          <item row="130" column="0">
+           <widget class="QRadioButton" name="PYG">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>PYG Парагвайский гуарани</string>
+            </property>
+           </widget>
+          </item>
+          <item row="150" column="0">
+           <widget class="QRadioButton" name="NGN">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>NGN Нигерийская наира</string>
+            </property>
+           </widget>
+          </item>
+          <item row="127" column="0">
+           <widget class="QRadioButton" name="QAR">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>QAR Катарский риал</string>
+            </property>
+           </widget>
+          </item>
+          <item row="69" column="0">
+           <widget class="QRadioButton" name="YER">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>YER Йеменский риал</string>
+            </property>
+           </widget>
+          </item>
+          <item row="225" column="0">
+           <widget class="QRadioButton" name="HUF">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>HUF Венгерский форинт</string>
+            </property>
+           </widget>
+          </item>
+          <item row="58" column="0">
+           <widget class="QRadioButton" name="AOA">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>AOA Ангольская кванза</string>
+            </property>
+           </widget>
+          </item>
+          <item row="24" column="0">
+           <widget class="QRadioButton" name="BRL">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>BRL Бразильский реал</string>
+            </property>
+           </widget>
+          </item>
+          <item row="71" column="0">
+           <widget class="QRadioButton" name="XOF">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>XOF Франк КФА (Западная Африка)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="104" column="0">
+           <widget class="QRadioButton" name="THB">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>THB Таиландский бат</string>
+            </property>
+           </widget>
+          </item>
+          <item row="114" column="0">
+           <widget class="QRadioButton" name="SGD">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>SGD Сингапурский доллар</string>
+            </property>
+           </widget>
+          </item>
+          <item row="219" column="0">
+           <widget class="QRadioButton" name="SZL">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>SZL Свазилендский лилангени</string>
+            </property>
+           </widget>
+          </item>
+          <item row="200" column="0">
+           <widget class="QRadioButton" name="GNF">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>GNF Гвинейский франк</string>
+            </property>
+           </widget>
+          </item>
+          <item row="160" column="0">
+           <widget class="QRadioButton" name="MWK">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>MWK Малавийская квача</string>
+            </property>
+           </widget>
+          </item>
+          <item row="74" column="0">
+           <widget class="QRadioButton" name="XDR">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>XDR СПЗ</string>
+            </property>
+           </widget>
+          </item>
+          <item row="36" column="0">
+           <widget class="QRadioButton" name="BHD">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>BHD Бахрейнский динар</string>
+            </property>
+           </widget>
+          </item>
+          <item row="134" column="0">
+           <widget class="QRadioButton" name="PKR">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>PKR Пакистанская рупия</string>
+            </property>
+           </widget>
+          </item>
+          <item row="211" column="0">
+           <widget class="QRadioButton" name="COP">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>COP Колумбийский песо</string>
+            </property>
+           </widget>
+          </item>
+          <item row="147" column="0">
+           <widget class="QRadioButton" name="NOK">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>NOK Норвежская крона</string>
+            </property>
+           </widget>
+          </item>
+          <item row="121" column="0">
+           <widget class="QRadioButton" name="SCR">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>SCR Сейшельская рупия</string>
+            </property>
+           </widget>
+          </item>
+          <item row="151" column="0">
+           <widget class="QRadioButton" name="NAD">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>NAD Намибийский доллар</string>
+            </property>
+           </widget>
+          </item>
+          <item row="213" column="0">
+           <widget class="QRadioButton" name="CDF">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>CDF Конголезский франк</string>
+            </property>
+           </widget>
+          </item>
+          <item row="222" column="0">
+           <widget class="QRadioButton" name="MKD">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>MKD Македонский денар</string>
+            </property>
+           </widget>
+          </item>
+          <item row="12" column="0">
+           <widget class="QRadioButton" name="BYN">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>BYN Белорусский рубль</string>
+            </property>
+           </widget>
+          </item>
+          <item row="178" column="0">
+           <widget class="QRadioButton" name="LAK">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>LAK Лаосский кип</string>
+            </property>
+           </widget>
+          </item>
+          <item row="21" column="0">
+           <widget class="QRadioButton" name="UZS">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>UZS Узбекский сум</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QRadioButton" name="GBP">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>GBP Фунт стерлингов Великобритании</string>
+            </property>
+           </widget>
+          </item>
+          <item row="210" column="0">
+           <widget class="QRadioButton" name="CRC">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>CRC Костариканский колон</string>
+            </property>
+           </widget>
+          </item>
+          <item row="169" column="0">
+           <widget class="QRadioButton" name="MGA">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>MGA Малагасийский ариари</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="0">
+           <widget class="QRadioButton" name="RUB">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>RUB Российский рубль</string>
+            </property>
+           </widget>
+          </item>
+          <item row="193" column="0">
+           <widget class="QRadioButton" name="INR">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>INR Индийская рупия</string>
+            </property>
+           </widget>
+          </item>
+          <item row="138" column="0">
+           <widget class="QRadioButton" name="PEN">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>PEN Перуанская соль</string>
+            </property>
+           </widget>
+          </item>
+          <item row="212" column="0">
+           <widget class="QRadioButton" name="CLP">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>CLP Чилийский песо</string>
+            </property>
+           </widget>
+          </item>
+          <item row="194" column="0">
+           <widget class="QRadioButton" name="ILS">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>ILS Израильский шекель</string>
+            </property>
+           </widget>
+          </item>
+          <item row="53" column="0">
+           <widget class="QRadioButton" name="ARS">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>ARS Аргентинский песо</string>
+            </property>
+           </widget>
+          </item>
+          <item row="107" column="0">
+           <widget class="QRadioButton" name="SRD">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>SRD Суринамский доллар</string>
+            </property>
+           </widget>
+          </item>
+          <item row="188" column="0">
+           <widget class="QRadioButton" name="JOD">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>JOD Иорданский динар</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="0">
+           <widget class="QLabel" name="UIS">
+            <property name="styleSheet">
+             <string/>
+            </property>
+            <property name="text">
+             <string>Валюты СНГ</string>
+            </property>
+           </widget>
+          </item>
+          <item row="196" column="0">
+           <widget class="QRadioButton" name="IDR">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>IDR Индонезийская рупия</string>
+            </property>
+           </widget>
+          </item>
+          <item row="223" column="0">
+           <widget class="QRadioButton" name="KPW">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>KPW Северо-корейская вона (КНДР)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="20" column="0">
+           <widget class="QRadioButton" name="TMT">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>TMT Туркменский манат</string>
+            </property>
+           </widget>
+          </item>
+          <item row="204" column="0">
+           <widget class="QRadioButton" name="ETB">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>ETB Эфиопский быр</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QRadioButton" name="CHF">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>CHF Швейцарский франк</string>
+            </property>
+           </widget>
+          </item>
+          <item row="30" column="0">
+           <widget class="QRadioButton" name="BND">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>BND Брунейский доллар</string>
+            </property>
+           </widget>
+          </item>
+          <item row="132" column="0">
+           <widget class="QRadioButton" name="PLN">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>PLN Польский злотый</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QRadioButton" name="JPY">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>JPY Японская йена</string>
+            </property>
+           </widget>
+          </item>
+          <item row="164" column="0">
+           <widget class="QRadioButton" name="MUR">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>MUR Маврикийская рупия</string>
+            </property>
+           </widget>
+          </item>
+          <item row="216" column="0">
+           <widget class="QRadioButton" name="BIF">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>BIF Бурундийский франк</string>
+            </property>
+           </widget>
+          </item>
+          <item row="208" column="0">
+           <widget class="QRadioButton" name="CZK">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>CZK Чешская крона</string>
+            </property>
+           </widget>
+          </item>
+          <item row="181" column="0">
+           <widget class="QRadioButton" name="KWD">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>KWD Кувейтский динар</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QRadioButton" name="EUR">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>EUR Евро</string>
+            </property>
+           </widget>
+          </item>
+          <item row="198" column="0">
+           <widget class="QRadioButton" name="HKD">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>HKD Гонконгский доллар</string>
+            </property>
+           </widget>
+          </item>
+          <item row="141" column="0">
+           <widget class="QRadioButton" name="OMR">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>OMR Оманский риал</string>
+            </property>
+           </widget>
+          </item>
+          <item row="158" column="0">
+           <widget class="QRadioButton" name="MXN">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>MXN Мексиканский песо</string>
+            </property>
+           </widget>
+          </item>
+          <item row="184" column="0">
+           <widget class="QRadioButton" name="KHR">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>KHR Камбоджийский риель</string>
+            </property>
+           </widget>
+          </item>
+          <item row="90" column="0">
+           <widget class="QRadioButton" name="TZS">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>TZS Танзанийский шиллинг</string>
+            </property>
+           </widget>
+          </item>
+          <item row="119" column="0">
+           <widget class="QRadioButton" name="SDG">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>SDG Суданский фунт</string>
+            </property>
+           </widget>
+          </item>
+          <item row="182" column="0">
+           <widget class="QRadioButton" name="KRW">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>KRW Южно-корейская вона (Корея)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="144" column="0">
+           <widget class="QRadioButton" name="NZD">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>NZD Ново­зеландский доллар</string>
+            </property>
+           </widget>
+          </item>
+          <item row="175" column="0">
+           <widget class="QRadioButton" name="LYD">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>LYD Ливийский динар</string>
+            </property>
+           </widget>
+          </item>
+          <item row="117" column="0">
+           <widget class="QRadioButton" name="SEK">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>SEK Шведская крона</string>
+            </property>
+           </widget>
+          </item>
+          <item row="106" column="0">
+           <widget class="QRadioButton" name="SYP">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>SYP Сирийский фунт</string>
+            </property>
+           </widget>
+          </item>
+          <item row="19" column="0">
+           <widget class="QRadioButton" name="TJS">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>TJS Таджикский сомони</string>
+            </property>
+           </widget>
+          </item>
+          <item row="22" column="0">
+           <widget class="QLabel" name="otherValuta">
+            <property name="styleSheet">
+             <string/>
+            </property>
+            <property name="text">
+             <string>Другие валюты</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QRadioButton" name="CNY">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>CNY Китайский юань женьминьби</string>
+            </property>
+           </widget>
+          </item>
+          <item row="29" column="0">
+           <widget class="QRadioButton" name="BOB">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>BOB Боливийский боливиано</string>
+            </property>
+           </widget>
+          </item>
+          <item row="39" column="0">
+           <widget class="QRadioButton" name="BGN">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>BGN Болгарский лев</string>
+            </property>
+           </widget>
+          </item>
+          <item row="224" column="0">
+           <widget class="QRadioButton" name="DJF">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>DJF Джибутийский франк</string>
+            </property>
+           </widget>
+          </item>
+          <item row="95" column="0">
+           <widget class="QRadioButton" name="TRY">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>TRY Новая турецкая лира</string>
+            </property>
+           </widget>
+          </item>
+          <item row="145" column="0">
+           <widget class="QRadioButton" name="NPR">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>NPR Непальская рупия</string>
+            </property>
+           </widget>
+          </item>
+          <item row="49" column="0">
+           <widget class="QRadioButton" name="AUD">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>AUD Австралийский доллар</string>
+            </property>
+           </widget>
+          </item>
+          <item row="190" column="0">
+           <widget class="QRadioButton" name="IRR">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>IRR Иранский риал</string>
+            </property>
+           </widget>
+          </item>
+          <item row="221" column="0">
+           <widget class="QRadioButton" name="NIO">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>NIO Никарагуанская кордоба</string>
+            </property>
+           </widget>
+          </item>
+          <item row="218" column="0">
+           <widget class="QRadioButton" name="VEF">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>VEF Венесуэльский боливар</string>
+            </property>
+           </widget>
+          </item>
+          <item row="201" column="0">
+           <widget class="QRadioButton" name="GMD">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>GMD Гамбийский даласи</string>
+            </property>
+           </widget>
+          </item>
+          <item row="14" column="0">
+           <widget class="QRadioButton" name="AZN">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>AZN Азербайджанский манат</string>
+            </property>
+           </widget>
+          </item>
+          <item row="157" column="0">
+           <widget class="QRadioButton" name="MYR">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>MYR Малайзийский ринггит</string>
+            </property>
+           </widget>
+          </item>
+          <item row="46" column="0">
+           <widget class="QRadioButton" name="AFN">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>AFN Афганский афгани</string>
+            </property>
+           </widget>
+          </item>
+          <item row="215" column="0">
+           <widget class="QRadioButton" name="BWP">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>BWP Ботсванская пула</string>
+            </property>
+           </widget>
+          </item>
+          <item row="98" column="0">
+           <widget class="QRadioButton" name="TND">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>TND Тунисский динар</string>
+            </property>
+           </widget>
+          </item>
+          <item row="17" column="0">
+           <widget class="QRadioButton" name="KZT">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>KZT Казахский тенге</string>
+            </property>
+           </widget>
+          </item>
+          <item row="202" column="0">
+           <widget class="QRadioButton" name="GHS">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>GHS Ганский седи</string>
+            </property>
+           </widget>
+          </item>
+          <item row="85" column="0">
+           <widget class="QRadioButton" name="UYU">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>UYU Уругвайский песо</string>
+            </property>
+           </widget>
+          </item>
+          <item row="62" column="0">
+           <widget class="QRadioButton" name="ALL">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>ALL Албанский лек</string>
+            </property>
+           </widget>
+          </item>
+          <item row="76" column="0">
+           <widget class="QRadioButton" name="XAF">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>XAF Франк КФА (Центральная Африка)	</string>
+            </property>
+           </widget>
+          </item>
+          <item row="41" column="0">
+           <widget class="QRadioButton" name="BDT">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>BDT Бангладешская така</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="updateValuta">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Обновить валюту</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0" rowspan="5">
+     <spacer name="verticalSpacer_3">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLabel" name="rate">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Расчёт коммунальных платежей.&lt;br/&gt;Выберите форму расчёта:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="3" rowspan="3">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="Advice">
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Для расчёта используется тариф, который&lt;br&gt;предварительно записан в таблицу тарифов. Если&lt;br&gt;Вам нужно расчитать сумму по другому тарифу,&lt;br&gt;просто проставте галочку снизу и введите&lt;br&gt;новый тариф. После просто сохраните его и в&lt;br&gt;следующий раз Вам не нужно будет вводить&lt;br&gt;повторно тариф. Для обновления суммы&lt;br&gt;нажмите кнопку &amp;quot;пересчитать&amp;quot;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="tariffValue">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="lineWidth">
+         <number>1</number>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Тариф составляет: -&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="checkNewTariff">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Ввести свой тариф</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="NewTariff">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="safeTariff">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Сохранить тариф</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="1">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <spacer name="horizontalSpacer_6">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="Rent">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Квартплата</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="Electricity">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Электричество</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="Gas">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Газ</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="ColdWater">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Холодная вода</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="HotWater">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Гарячая вода</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="Heating">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Отопление</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_7">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1200</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>История</string>
+    </property>
+    <addaction name="open"/>
+    <addaction name="clear"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>Язык</string>
+    </property>
+    <addaction name="rusRU"/>
+    <addaction name="rusUA"/>
+    <addaction name="uaUA"/>
+    <addaction name="enUS"/>
+   </widget>
+   <widget class="QMenu" name="about">
+    <property name="title">
+     <string>О программе</string>
+    </property>
+    <addaction name="aboutProgram"/>
+    <addaction name="aboutQt"/>
+   </widget>
+   <widget class="QMenu" name="Theme">
+    <property name="title">
+     <string>Тема</string>
+    </property>
+    <addaction name="light"/>
+    <addaction name="dark"/>
+    <addaction name="separator"/>
+    <addaction name="aboutTheme"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="Theme"/>
+   <addaction name="about"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhSensitiveData</set>
+   </property>
+   <property name="sizeGripEnabled">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <action name="open">
+   <property name="text">
+    <string>Открыть</string>
+   </property>
+  </action>
+  <action name="clear">
+   <property name="text">
+    <string>Очистить</string>
+   </property>
+  </action>
+  <action name="rusRU">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Русский (Россия)</string>
+   </property>
+  </action>
+  <action name="rusUA">
+   <property name="text">
+    <string>Русский (Украина)</string>
+   </property>
+  </action>
+  <action name="uaUA">
+   <property name="text">
+    <string>Украинский</string>
+   </property>
+  </action>
+  <action name="enUS">
+   <property name="text">
+    <string>Английский (США)</string>
+   </property>
+  </action>
+  <action name="aboutProgram">
+   <property name="text">
+    <string>Программа</string>
+   </property>
+  </action>
+  <action name="aboutQt">
+   <property name="text">
+    <string>Qt</string>
+   </property>
+  </action>
+  <action name="light">
+   <property name="text">
+    <string>Светлая</string>
+   </property>
+  </action>
+  <action name="dark">
+   <property name="text">
+    <string>Тёмная</string>
+   </property>
+  </action>
+  <action name="aboutTheme">
+   <property name="text">
+    <string>О теме</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

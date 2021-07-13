@@ -7,7 +7,7 @@
 [![PULL_REQUEST_TEMPLATE](https://img.shields.io/badge/here-PULL_REQUEST_TEMPLATE-orange)](https://github.com/Nakama3942/CommPayGUI/blob/main/.github/PULL_REQUEST_TEMPLATE.md)
 
 ### Comment
-This is a further development of my CommPay project. I created a graphical shell for my application and adapted the old code for it.
+This is a further development of my [CommPay](https://github.com/Nakama3942/CommPay) project. I created a graphical shell for my application and adapted the old code for it.
 
 # CommPayGUI
 ## Overview

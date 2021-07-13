@@ -6,9 +6,11 @@ CommPay::CommPay(QWidget *parent)
     , ui(new Ui::CommPay)
 {
     ui->setupUi(this);
-    //Устанавливаю стандартный язык
-    qtLanguageTranslator.load(QString("CommPay_ru_RU.qm"));
-    qApp->installTranslator(&qtLanguageTranslator);
+
+    //Если загрузка успешна - устанавливаю перевод, а после - перевожу интерфейс
+    if(qtLanguageTranslator.load("languages/CommPay_ru_RU.qm"))
+        qApp->installTranslator(&qtLanguageTranslator);
+    ui->retranslateUi(this);
 }
 CommPay::~CommPay()
 {
@@ -763,29 +765,41 @@ void CommPay::on_clear_triggered()
 
 void CommPay::on_rusRU_triggered()
 {
-    qtLanguageTranslator.load(QString("languages/CommPay_ru_RU.qm"));
-    qApp->installTranslator(&qtLanguageTranslator);
+    //Если загрузка успешна - устанавливаю перевод, а после - перевожу интерфейс
+    if(qtLanguageTranslator.load("languages/CommPay_ru_RU.qm"))
+        qApp->installTranslator(&qtLanguageTranslator);
+    ui->retranslateUi(this);
+
     ui->statusbar->showMessage("Установлен язык: Русский (Россия)");
 }
 
 void CommPay::on_rusUA_triggered()
 {
-    qtLanguageTranslator.load(QString("languages/CommPay_ru_UA.qm"));
-    qApp->installTranslator(&qtLanguageTranslator);
+    //Если загрузка успешна - устанавливаю перевод, а после - перевожу интерфейс
+    if(qtLanguageTranslator.load("languages/CommPay_ru_UA.qm"))
+        qApp->installTranslator(&qtLanguageTranslator);
+    ui->retranslateUi(this);
+
     ui->statusbar->showMessage("Установлен язык: Русский (Украина)");
 }
 
 void CommPay::on_uaUA_triggered()
 {
-    qtLanguageTranslator.load(QString("languages/CommPay_uk_UA.qm"));
-    qApp->installTranslator(&qtLanguageTranslator);
+    //Если загрузка успешна - устанавливаю перевод, а после - перевожу интерфейс
+    if(qtLanguageTranslator.load("languages/CommPay_uk_UA.qm"))
+        qApp->installTranslator(&qtLanguageTranslator);
+    ui->retranslateUi(this);
+
     ui->statusbar->showMessage("Установлен язык: Украинский");
 }
 
 void CommPay::on_enUS_triggered()
 {
-    qtLanguageTranslator.load(QString("languages/CommPay_en_US.qm"));
-    qApp->installTranslator(&qtLanguageTranslator);
+    //Если загрузка успешна - устанавливаю перевод, а после - перевожу интерфейс
+    if(qtLanguageTranslator.load("languages/CommPay_en_US.qm"))
+        qApp->installTranslator(&qtLanguageTranslator);
+    ui->retranslateUi(this);
+
     ui->statusbar->showMessage("Установлен язык: Английский (США)");
 }
 
